@@ -7,5 +7,5 @@ urlpatterns = [
     path('', include('quotes.urls')),
     path('users/', include('users.urls')),
     path('creation_new_author/', include('creation_new_author.urls')),
-    path('author/', include('quotes.urls')),
+
 ]
