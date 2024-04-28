@@ -1,10 +1,12 @@
 from django.db import transaction
 from pymongo import MongoClient
-
-
+import os
+import django
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dz_project.settings')
+django.setup()
 # Підключення до MongoDB
 mongo_client = MongoClient('mongodb://localhost:27017/')
-mongo_db = mongo_client['your_database_name']
+mongo_db = mongo_client['DZ_10']
 
 
 from quotes.models import Quote, Tag, Author # noqa
